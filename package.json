@@ -1,17 +1,7 @@
 {
-  "name": "browser-bunyan",
-  "version": "0.4.0",
-  "description": "A fork of Bunyan specifically for the browser",
-  "author": "Phil Mander <philip.mander@gmail.com>",
-  "main": "./lib/bunyan.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/philmander/browser-bunyan.git"
-  },
+  "name": "bunyan",
+  "version": "1.0.0",
   "keywords": ["log", "logging", "log4j", "json", "bunyan"],
-  "scripts": {
-    "test": "node_modules/nodeunit/bin/nodeunit test/*.test.js"
-  },
   "devDependencies": {
     "bunyan": "2.0.2",
     "browserify": "^9.0.4",
