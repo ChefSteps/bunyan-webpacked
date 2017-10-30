@@ -1,6 +1,6 @@
 {
-  "name": "bunyan",
-  "version": "1.0.0",
+  "name": "bunyan-webpacked",
+  "version": "2.0.2",
   "keywords": ["log", "logging", "log4j", "json", "bunyan"],
   "devDependencies": {
     "bunyan": "2.0.2",
