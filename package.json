@@ -1,6 +1,6 @@
 {
   "name": "bunyan-webpacked",
-  "version": "2.0.2",
+  "version": "2.0.2-minified",
   "main": "index.min.js",
   "keywords": ["log", "logging", "log4j", "json", "bunyan"],
   "devDependencies": {
