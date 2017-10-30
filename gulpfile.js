@@ -8,22 +8,16 @@ var util = require('util');
 var rename = require('gulp-rename');
 var insert = require('gulp-insert');
 
+var sourceFile = './node_modules/bunyan/lib/bunyan.js'
+
 gulp.task('clean', function () {
     return del('./dist/**/*.*');
 });
 
-//jshint
-gulp.task('lint', function() {
-    return gulp.src('./lib/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
-        .pipe(jshint.reporter('fail'));
-});
-
 //package with browserify
-gulp.task('package', [ 'lint', 'clean' ], function() {
+gulp.task('package', [ 'clean' ], function() {
     return browserify({
-        entries: './lib/bunyan.js',
+        entries: sourceFile,
         standalone: 'bunyan'
     })
         .bundle()

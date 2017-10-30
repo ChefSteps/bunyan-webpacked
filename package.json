@@ -8,17 +8,12 @@
     "type": "git",
     "url": "git://github.com/philmander/browser-bunyan.git"
   },
-  "keywords": [
-    "log",
-    "logging",
-    "log4j",
-    "json",
-    "bunyan"
-  ],
-  "scripts" : {
-    "test" : "node_modules/nodeunit/bin/nodeunit test/*.test.js"
+  "keywords": ["log", "logging", "log4j", "json", "bunyan"],
+  "scripts": {
+    "test": "node_modules/nodeunit/bin/nodeunit test/*.test.js"
   },
   "devDependencies": {
+    "bunyan": "2.0.2",
     "browserify": "^9.0.4",
     "del": "^1.1.1",
     "gulp": "^3.8.11",
@@ -33,7 +28,8 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/philmander/browser-bunyan/blob/master/LICENSE.txt"
+      "url":
+        "https://github.com/philmander/browser-bunyan/blob/master/LICENSE.txt"
     }
   ]
 }
