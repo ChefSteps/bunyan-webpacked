@@ -21,8 +21,8 @@ gulp.task('package', [ 'clean' ], function() {
         standalone: 'bunyan'
     })
         .bundle()
-        .pipe(vinylStream('browser-bunyan.js'))
-        .pipe(gulp.dest('./dist'));
+        .pipe(vinylStream('index.js'))
+        .pipe(gulp.dest('.'));
 });
 
 gulp.task('minify', [ 'package' ], function() {
@@ -37,14 +37,14 @@ gulp.task('minify', [ 'package' ], function() {
     var meta = require('./package.json');
     var packageMessage = util.format(packageMessageTempalte, meta.name, meta.version, meta.description, meta.licenses[0].type);
 
-    return gulp.src('./dist/browser-bunyan.js')
+    return gulp.src('./index.js')
         .pipe(uglify())
         .pipe(rename({
             suffix: '.min'
         }))
         .pipe(uglify())
         .pipe(insert.prepend(packageMessage))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('.'));
 });
 
 gulp.task('default', ['minify']);
