@@ -1,13 +1,20 @@
 {
-  "name": "bunyan-webpacked",
+  "name": "react-native-bunyan",
   "version": "2.0.2-minified",
   "main": "index.min.js",
-  "keywords": ["log", "logging", "log4j", "json", "bunyan"],
+  "keywords": [
+    "log",
+    "logging",
+    "log4j",
+    "json",
+    "bunyan"
+  ],
   "devDependencies": {
-    "bunyan": "2.0.2",
     "browserify": "^9.0.4",
+    "bunyan": "2.0.2",
     "del": "^1.1.1",
     "gulp": "^3.8.11",
+    "gulp-concat": "^2.6.1",
     "gulp-insert": "^0.5.0",
     "gulp-jshint": "^1.10.0",
     "gulp-rename": "^1.2.2",
