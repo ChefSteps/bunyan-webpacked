@@ -1,6 +1,6 @@
 {
   "name": "react-native-bunyan",
-  "version": "2.0.2-minified",
+  "version": "1.8.12",
   "main": "dist/index.min.js",
   "keywords": [
     "log",
@@ -11,7 +11,7 @@
   ],
   "devDependencies": {
     "browserify": "^9.0.4",
-    "bunyan": "2.0.2",
+    "bunyan": "1.8.12",
     "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-concat": "^2.6.1",

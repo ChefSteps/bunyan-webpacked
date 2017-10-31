@@ -19,6 +19,8 @@ if (typeof window === 'undefined') {
  * vim: expandtab:ts=4:sw=4
  */
 
+var VERSION = '1.8.12';
+
 /*
  * Bunyan log format version. This becomes the 'v' field on all log records.
  * This will be incremented if there is any backward incompatible change to
@@ -1620,7 +1622,7 @@ module.exports.resolveLevel = resolveLevel;
 module.exports.levelFromName = levelFromName;
 module.exports.nameFromLevel = nameFromLevel;
 
-module.exports.VERSION = require('../package.json').version;
+module.exports.VERSION = VERSION;
 module.exports.LOG_VERSION = LOG_VERSION;
 
 module.exports.createLogger = function createLogger(options) {
@@ -1636,7 +1638,7 @@ module.exports.RotatingFileStream = RotatingFileStream;
 module.exports.safeCycles = safeCycles;
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")},require('_process'))
-},{"../../is-buffer/index.js":13,"../package.json":8,"_process":16,"assert":2,"events":10,"fs":5,"os":15,"safe-json-stringify":27,"stream":28,"util":32}],2:[function(require,module,exports){
+},{"../../is-buffer/index.js":12,"_process":15,"assert":2,"events":9,"fs":5,"os":14,"safe-json-stringify":26,"stream":27,"util":31}],2:[function(require,module,exports){
 // http://wiki.commonjs.org/wiki/Unit_Testing/1.0
 //
 // THIS IS NOT TESTED NOR LIKELY TO WORK OUTSIDE V8!
@@ -1997,7 +1999,7 @@ var objectKeys = Object.keys || function (obj) {
   return keys;
 };
 
-},{"util/":32}],3:[function(require,module,exports){
+},{"util/":31}],3:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 ;(function (exports) {
@@ -3679,7 +3681,7 @@ function blitBuffer (src, dst, offset, length) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"base64-js":3,"ieee754":11,"isarray":7}],7:[function(require,module,exports){
+},{"base64-js":3,"ieee754":10,"isarray":7}],7:[function(require,module,exports){
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
@@ -3687,285 +3689,6 @@ module.exports = Array.isArray || function (arr) {
 };
 
 },{}],8:[function(require,module,exports){
-module.exports={
-  "// dtrace-provider": "required for dtrace features",
-  "// moment": "required for local time with CLI",
-  "// mv": "required for RotatingFileStream",
-  "_args": [
-    [
-      "bunyan@2.0.2",
-      "/Users/jrivera/chefsteps/forks/react-native-bunyan"
-    ]
-  ],
-  "_from": "bunyan@2.0.2",
-  "_id": "bunyan@2.0.2",
-  "_inCache": true,
-  "_installable": true,
-  "_location": "/bunyan",
-  "_nodeVersion": "4.8.0",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/bunyan-2.0.2.tgz_1501718299440_0.5010072370059788"
-  },
-  "_npmUser": {
-    "email": "trentm@gmail.com",
-    "name": "trentm"
-  },
-  "_npmVersion": "2.15.11",
-  "_phantomChildren": {},
-  "_requested": {
-    "name": "bunyan",
-    "raw": "bunyan@2.0.2",
-    "rawSpec": "2.0.2",
-    "scope": null,
-    "spec": "2.0.2",
-    "type": "version"
-  },
-  "_requiredBy": [
-    "#DEV:/"
-  ],
-  "_resolved": "https://registry.npmjs.org/bunyan/-/bunyan-2.0.2.tgz",
-  "_shasum": "8dbb0feb1a320b9255bc42ba2d4460ad6c045028",
-  "_shrinkwrap": null,
-  "_spec": "bunyan@2.0.2",
-  "_where": "/Users/jrivera/chefsteps/forks/react-native-bunyan",
-  "author": {
-    "email": "trentm@gmail.com",
-    "name": "Trent Mick",
-    "url": "http://trentm.com"
-  },
-  "bin": {
-    "bunyan": "./bin/bunyan"
-  },
-  "bugs": {
-    "url": "https://github.com/trentm/node-bunyan/issues"
-  },
-  "contributors": [
-    {
-      "name": "Martin Gausby",
-      "url": "https://github.com/gausby"
-    },
-    {
-      "name": "Trent Mick",
-      "url": "http://trentm.com"
-    },
-    {
-      "name": "Dave Pacheco",
-      "url": "https://github.com/davepacheco"
-    },
-    {
-      "name": "Michael Hart",
-      "url": "https://github.com/mhart"
-    },
-    {
-      "name": "Isaac Schlueter",
-      "url": "https://github.com/isaacs"
-    },
-    {
-      "name": "Rob Gulewich",
-      "url": "https://github.com/rgulewich"
-    },
-    {
-      "name": "Bryan Cantrill",
-      "url": "https://github.com/bcantrill"
-    },
-    {
-      "name": "Michael Hart",
-      "url": "https://github.com/mhart"
-    },
-    {
-      "name": "Simon Wade",
-      "url": "https://github.com/aexmachina"
-    },
-    {
-      "name": "https://github.com/glenn-murray-bse"
-    },
-    {
-      "name": "Chakrit Wichian",
-      "url": "https://github.com/chakrit"
-    },
-    {
-      "name": "Patrick Mooney",
-      "url": "https://github.com/pfmooney"
-    },
-    {
-      "name": "Johan Nordberg",
-      "url": "https://github.com/jnordberg"
-    },
-    {
-      "name": "https://github.com/timborodin"
-    },
-    {
-      "name": "Ryan Graham",
-      "url": "https://github.com/rmg"
-    },
-    {
-      "name": "Alex Kocharin",
-      "url": "https://github.com/rlidwka"
-    },
-    {
-      "name": "Andrei Neculau",
-      "url": "https://github.com/andreineculau"
-    },
-    {
-      "name": "Mihai Tomescu",
-      "url": "https://github.com/matomesc"
-    },
-    {
-      "name": "Daniel Juhl",
-      "url": "https://github.com/danieljuhl"
-    },
-    {
-      "name": "Chris Barber",
-      "url": "https://github.com/cb1kenobi"
-    },
-    {
-      "name": "Manuel Schneider",
-      "url": "https://github.com/manuelschneider"
-    },
-    {
-      "name": "Mark Cavage",
-      "url": "https://github.com/mcavage"
-    },
-    {
-      "name": "Stéphan Kochen",
-      "url": "https://github.com/stephank"
-    },
-    {
-      "name": "Shakeel Mohamed",
-      "url": "https://github.com/shakeelmohamed"
-    },
-    {
-      "name": "Denis Izmaylov",
-      "url": "https://github.com/DenisIzmaylov"
-    },
-    {
-      "name": "Guillermo Grau Panea",
-      "url": "https://github.com/guigrpa"
-    },
-    {
-      "name": "Mark LeMerise",
-      "url": "https://github.com/MarkLeMerise"
-    },
-    {
-      "name": "https://github.com/sometimesalready"
-    },
-    {
-      "name": "Charly Koza",
-      "url": "https://github.com/Cactusbone"
-    },
-    {
-      "name": "Thomas Heymann",
-      "url": "https://github.com/cyberthom"
-    },
-    {
-      "name": "David M. Lee",
-      "url": "https://github.com/leedm777"
-    },
-    {
-      "name": "Marc Udoff",
-      "url": "https://github.com/mlucool"
-    },
-    {
-      "name": "Mark Stosberg",
-      "url": "https://github.com/markstos"
-    },
-    {
-      "name": "Alexander Ray",
-      "url": "https://github.com/aray12"
-    },
-    {
-      "name": "Adam Lynch",
-      "url": "https://github.com/adam-lynch"
-    },
-    {
-      "name": "Michael Nisi",
-      "url": "https://github.com/michaelnisi"
-    },
-    {
-      "name": "Martijn Schrage",
-      "url": "https://github.com/Oblosys"
-    },
-    {
-      "name": "Paul Milham",
-      "url": "https://github.com/domrein"
-    },
-    {
-      "name": "Frankie O'Rourke",
-      "url": "https://github.com/psfrankie"
-    },
-    {
-      "name": "Cody Mello",
-      "url": "https://github.com/melloc"
-    },
-    {
-      "name": "Todd Whiteman",
-      "url": "https://github.com/twhiteman"
-    },
-    {
-      "name": "Zach Bjornson",
-      "url": "https://github.com/zbjornson"
-    }
-  ],
-  "dependencies": {
-    "dtrace-provider": "~0.8",
-    "exeunt": "1.1.0",
-    "moment": "^2.10.6",
-    "mv": "~2",
-    "safe-json-stringify": "~1"
-  },
-  "description": "a JSON logging library for node.js services",
-  "devDependencies": {
-    "ben": "0.0.0",
-    "markdown-toc": "0.12.x",
-    "nodeunit": "0.9",
-    "vasync": "1.4.3",
-    "verror": "1.3.3"
-  },
-  "directories": {},
-  "dist": {
-    "shasum": "8dbb0feb1a320b9255bc42ba2d4460ad6c045028",
-    "tarball": "https://registry.npmjs.org/bunyan/-/bunyan-2.0.2.tgz"
-  },
-  "engines": [
-    "node >=0.10.0"
-  ],
-  "gitHead": "14609dfb690696cd026182cdaee8bf7fb518921b",
-  "homepage": "https://github.com/trentm/node-bunyan#readme",
-  "keywords": [
-    "bunyan",
-    "json",
-    "log",
-    "log4j",
-    "logging"
-  ],
-  "license": "MIT",
-  "main": "./lib/bunyan.js",
-  "maintainers": [
-    {
-      "name": "trentm",
-      "email": "trentm@gmail.com"
-    }
-  ],
-  "name": "bunyan",
-  "optionalDependencies": {
-    "dtrace-provider": "~0.8",
-    "moment": "^2.10.6",
-    "mv": "~2",
-    "safe-json-stringify": "~1"
-  },
-  "readme": "ERROR: No README data found!",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/trentm/node-bunyan.git"
-  },
-  "scripts": {
-    "test": "make test"
-  },
-  "version": "2.0.2"
-}
-
-},{}],9:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -4076,7 +3799,7 @@ function objectToString(o) {
 }
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":13}],10:[function(require,module,exports){
+},{"../../is-buffer/index.js":12}],9:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -4379,7 +4102,7 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],11:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = nBytes * 8 - mLen - 1
@@ -4465,7 +4188,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],12:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -4490,7 +4213,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],13:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 /*!
  * Determine if an object is a Buffer
  *
@@ -4513,12 +4236,12 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],14:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };
 
-},{}],15:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 exports.endianness = function () { return 'LE' };
 
 exports.hostname = function () {
@@ -4565,7 +4288,7 @@ exports.tmpdir = exports.tmpDir = function () {
 
 exports.EOL = '\n';
 
-},{}],16:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -4625,10 +4348,10 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],17:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 module.exports = require("./lib/_stream_duplex.js")
 
-},{"./lib/_stream_duplex.js":18}],18:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":17}],17:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -4721,7 +4444,7 @@ function forEach (xs, f) {
 }
 
 }).call(this,require('_process'))
-},{"./_stream_readable":20,"./_stream_writable":22,"_process":16,"core-util-is":9,"inherits":12}],19:[function(require,module,exports){
+},{"./_stream_readable":19,"./_stream_writable":21,"_process":15,"core-util-is":8,"inherits":11}],18:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -4769,7 +4492,7 @@ PassThrough.prototype._transform = function(chunk, encoding, cb) {
   cb(null, chunk);
 };
 
-},{"./_stream_transform":21,"core-util-is":9,"inherits":12}],20:[function(require,module,exports){
+},{"./_stream_transform":20,"core-util-is":8,"inherits":11}],19:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -5724,7 +5447,7 @@ function indexOf (xs, x) {
 }
 
 }).call(this,require('_process'))
-},{"./_stream_duplex":18,"_process":16,"buffer":6,"core-util-is":9,"events":10,"inherits":12,"isarray":14,"stream":28,"string_decoder/":29,"util":4}],21:[function(require,module,exports){
+},{"./_stream_duplex":17,"_process":15,"buffer":6,"core-util-is":8,"events":9,"inherits":11,"isarray":13,"stream":27,"string_decoder/":28,"util":4}],20:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -5935,7 +5658,7 @@ function done(stream, er) {
   return stream.push(null);
 }
 
-},{"./_stream_duplex":18,"core-util-is":9,"inherits":12}],22:[function(require,module,exports){
+},{"./_stream_duplex":17,"core-util-is":8,"inherits":11}],21:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -6416,10 +6139,10 @@ function endWritable(stream, state, cb) {
 }
 
 }).call(this,require('_process'))
-},{"./_stream_duplex":18,"_process":16,"buffer":6,"core-util-is":9,"inherits":12,"stream":28}],23:[function(require,module,exports){
+},{"./_stream_duplex":17,"_process":15,"buffer":6,"core-util-is":8,"inherits":11,"stream":27}],22:[function(require,module,exports){
 module.exports = require("./lib/_stream_passthrough.js")
 
-},{"./lib/_stream_passthrough.js":19}],24:[function(require,module,exports){
+},{"./lib/_stream_passthrough.js":18}],23:[function(require,module,exports){
 (function (process){
 exports = module.exports = require('./lib/_stream_readable.js');
 exports.Stream = require('stream');
@@ -6433,13 +6156,13 @@ if (!process.browser && process.env.READABLE_STREAM === 'disable') {
 }
 
 }).call(this,require('_process'))
-},{"./lib/_stream_duplex.js":18,"./lib/_stream_passthrough.js":19,"./lib/_stream_readable.js":20,"./lib/_stream_transform.js":21,"./lib/_stream_writable.js":22,"_process":16,"stream":28}],25:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":17,"./lib/_stream_passthrough.js":18,"./lib/_stream_readable.js":19,"./lib/_stream_transform.js":20,"./lib/_stream_writable.js":21,"_process":15,"stream":27}],24:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
-},{"./lib/_stream_transform.js":21}],26:[function(require,module,exports){
+},{"./lib/_stream_transform.js":20}],25:[function(require,module,exports){
 module.exports = require("./lib/_stream_writable.js")
 
-},{"./lib/_stream_writable.js":22}],27:[function(require,module,exports){
+},{"./lib/_stream_writable.js":21}],26:[function(require,module,exports){
 var hasProp = Object.prototype.hasOwnProperty;
 
 function throwsMessage(err) {
@@ -6500,7 +6223,7 @@ module.exports = function(data) {
 
 module.exports.ensureProperties = ensureProperties;
 
-},{}],28:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6629,7 +6352,7 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":10,"inherits":12,"readable-stream/duplex.js":17,"readable-stream/passthrough.js":23,"readable-stream/readable.js":24,"readable-stream/transform.js":25,"readable-stream/writable.js":26}],29:[function(require,module,exports){
+},{"events":9,"inherits":11,"readable-stream/duplex.js":16,"readable-stream/passthrough.js":22,"readable-stream/readable.js":23,"readable-stream/transform.js":24,"readable-stream/writable.js":25}],28:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6852,16 +6575,16 @@ function base64DetectIncompleteChar(buffer) {
   this.charLength = this.charReceived ? 3 : 0;
 }
 
-},{"buffer":6}],30:[function(require,module,exports){
-arguments[4][12][0].apply(exports,arguments)
-},{"dup":12}],31:[function(require,module,exports){
+},{"buffer":6}],29:[function(require,module,exports){
+arguments[4][11][0].apply(exports,arguments)
+},{"dup":11}],30:[function(require,module,exports){
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'
     && typeof arg.readUInt8 === 'function';
 }
-},{}],32:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -7451,5 +7174,5 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":31,"_process":16,"inherits":30}]},{},[1])(1)
+},{"./support/isBuffer":30,"_process":15,"inherits":29}]},{},[1])(1)
 });
