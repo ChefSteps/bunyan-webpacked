@@ -29,7 +29,7 @@ gulp.task('browserify', ['clean'], function() {
 gulp.task('package', ['clean', 'browserify'], function() {
   return gulp.src([ './lib/windowShim.js', './build/bunyan.js'])
     .pipe(concat('index.js'))
-    .pipe(gulp.dest('./dest'));
+    .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('minify', ['package'], function() {
