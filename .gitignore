@@ -4,3 +4,4 @@
 !/test/corpus/*.log
 /*.tgz
 .idea
+/build
