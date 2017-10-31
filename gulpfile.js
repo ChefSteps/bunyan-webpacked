@@ -34,7 +34,7 @@ gulp.task('package', ['clean', 'browserify'], function() {
 
 gulp.task('minify', ['package'], function() {
   return gulp
-    .src('./index.js')
+    .src('./dist/index.js')
     .pipe(uglify())
     .pipe(
       rename({
